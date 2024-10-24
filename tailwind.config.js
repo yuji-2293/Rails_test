@@ -6,11 +6,14 @@ module.exports = {
     './app/javascript/**/*.js'
   ],
   plugins: [
-    require('daisyui')
+    require('daisyui'), require('@tailwindcss/typography'),
   ],
   daisyui: {
     themes: [
-      "bumblebee"
+      "light",
+      "night",
+      "winter"
     ],
+    darkTheme: false,
   },
 }
