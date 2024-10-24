@@ -1,0 +1,25 @@
+<header>
+<div class="navbar bg-gray-300">
+  <div class="flex-1">
+    <%= link_to root_path do %>
+    <a class="btn btn-ghost text-xl">EmoticColor</a>
+    <% end %>
+  </div>
+  <div class="flex-none">
+    <ul class="menu menu-horizontal px-1">
+        <li>          
+            <%= link_to 'ログアウト', logout_path, class: "nav-link", data: { turbo_method: :delete } %>
+        </li>
+      <li>
+        <details>
+          <summary>Parent</summary>
+          <ul class="bg-base-100 rounded-t-none p-2">
+            <li><a>プロフィール</a></li>
+            <li><a>#</a></li>
+          </ul>
+        </details>
+      </li>
+    </ul>
+  </div>
+</div>
+</header>

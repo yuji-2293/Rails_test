@@ -2,6 +2,7 @@
   "name": "app",
   "private": "true",
   "dependencies": {
+    "@hotwired/turbo-rails": "^8.0.12",
     "@tailwindcss/typography": "^0.5.15",
     "autoprefixer": "^10.4.20",
     "daisyui": "^4.12.13",
