@@ -6,7 +6,7 @@ module.exports = {
     './app/javascript/**/*.js'
   ],
   plugins: [
-    require('daisyui'), require('@tailwindcss/typography'),
+    require('daisyui'), require('@tailwindcss/typography'),require('@tailwindcss/forms'),
   ],
   daisyui: {
     themes: [
@@ -15,5 +15,18 @@ module.exports = {
       "winter"
     ],
     darkTheme: false,
+  },
+  theme: {
+    extend: {
+      keyframes: {
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-20px)' },
+        },
+      },
+      animation: {
+        float: 'float 6s ease-in-out infinite',
+      },
+    },
   },
 }
