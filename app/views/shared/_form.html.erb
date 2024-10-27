@@ -1,0 +1,30 @@
+<%= form_with model: @color ||Color.new, url: colors_path, local: true  do |f|%>
+
+            <div class="color_list mb-10 pl-5">
+            
+                <div class="color_selection grid grid-flow-col mb-10">
+                    <button type="button" class="color-ball w-16 h-16 bg-red-300 rounded-full" data-color-id="1"></button>
+                    <button type="button" class="color-ball w-16 h-16 bg-orange-300 rounded-full " data-color-id="3"></button>     
+                    <button type="button" class="color-ball w-16 h-16 bg-yellow-300 rounded-full " data-color-id="5"></button>
+                    <button type="button" class="color-ball w-16 h-16 bg-green-300 rounded-full " data-color-id="7"></button>
+                    <button type="button" class="color-ball w-16 h-16 bg-blue-300 rounded-full " data-color-id="9"></button>
+                    <button type="button" class="color-ball w-16 h-16 bg-purple-300 rounded-full " data-color-id="11"></button>
+                    <button type="button" class="color-ball w-16 h-16 bg-white outline outline-slate-100 rounded-full "data-color-id="13"></button>
+                </div>
+                <div class="color_selection grid grid-flow-col ">
+                    <button type="button" class="color-ball w-16 h-16 bg-red-500 rounded-full " data-color-id="2"></button>
+                    <button type="button" class="color-ball w-16 h-16 bg-orange-500 rounded-full " data-color-id="4"></button>      
+                    <button type="button" class="color-ball w-16 h-16 bg-yellow-500 rounded-full " data-color-id="6"></button>
+                    <button type="button" class="color-ball w-16 h-16 bg-green-500 rounded-full " data-color-id="8"></button>
+                    <button type="button" class="color-ball w-16 h-16 bg-blue-500 rounded-full " data-color-id="10"></button>
+                    <button type="button" class="color-ball w-16 h-16 bg-purple-500 rounded-full " data-color-id="12"></button>
+                    <button type="button" class="color-ball w-16 h-16 bg-black rounded-full " data-color-id="14"></button>
+                </div>
+            </div>
+            <%= render 'shared/error_messages', object: f.object %>
+            <%= f.hidden_field :mood_color_id, id: 'mood_color_id' %>
+            <div class="m-6">
+            <%= f.submit  class: "btn btn-primary"%>
+            </div>
+            
+<% end %>

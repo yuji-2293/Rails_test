@@ -1,28 +1,24 @@
-    <div class="relative bg-center w-full bg-no-repeat bg-cover h-[calc(100vh-134px)]" style="background-image: url('<%= asset_path("top.jpg") %>');z-index: -1;">
-      <div class="absolute inset-0 flex justify-center items-center text-3xl text-blue-300 text-center">
+    <div class="relative bg-center w-full bg-no-repeat bg-cover h-[calc(100vh-134px)]" style="background-image: url('<%= asset_path("top.jpg") %>');">
+        <div class="absolute inset-0 flex justify-center items-center text-3xl text-center">
 
-        <div class="artboard artboard-horizontal phone-4  bg-white rounded-md opacity-75 ">
-            <div class="color_list">
-              <div class="color_selection grid grid-flow-col px-4 mb-10">
-                <div class="w-16 h-16 bg-blue-500 rounded-full animate-float"></div>
-                <div class="w-12 h-12 bg-red-500 rounded-full animate-float"></div>
-                <div class="w-20 h-20 bg-green-500 rounded-full animate-float"></div>
-                <div class="w-12 h-12 bg-red-500 rounded-full animate-float"></div>
-                <div class="w-20 h-20 bg-green-500 rounded-full animate-float"></div>
-                <div class="w-12 h-12 bg-red-500 rounded-full animate-float"></div>
-                <div class="w-20 h-20 bg-green-500 rounded-full animate-float"></div>
+          <div class="w-2xl  grid grid-rows-2  bg-white rounded-lg shadow-md">
+              <div class="section_about">
+                <div class="">
+                  <h2>今日の気分は？</h2>
+                    <label class="text-3xl lg:text-2xl md:text-lg sm:text-md">
+                      あなたの今の気分をカラーボールから<br>直感で選んでみてください
+                    </label>
+                </div>
               </div>
-              <div class="color_selection grid grid-flow-col px-4 ">
-                <div class="w-16 h-16 bg-blue-500 rounded-full animate-float"></div>
-                <div class="w-12 h-12 bg-red-500 rounded-full animate-float"></div>
-                <div class="w-20 h-20 bg-green-500 rounded-full animate-float"></div>
-                <div class="w-12 h-12 bg-red-500 rounded-full animate-float"></div>
-                <div class="w-20 h-20 bg-green-500 rounded-full animate-float"></div>
-                <div class="w-12 h-12 bg-red-500 rounded-full animate-float"></div>
-                <div class="w-20 h-20 bg-green-500 rounded-full animate-float"></div>
-              </div>
-            </div>
+            <%= render 'shared/form', color: @color %>
+          </div>
         </div>
-      
-      </div>
-    </div>
+        </div>
+<script>
+  document.querySelectorAll('.color-ball').forEach(function(ball){
+    ball.addEventListener('click', function(){
+      const colorId = this.getAttribute('data-color-id');
+      document.getElementById('mood_color_id').value = colorId;
+    });
+  });
+</script>
