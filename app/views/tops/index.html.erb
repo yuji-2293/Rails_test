@@ -1,24 +1,14 @@
-    <div class="relative bg-center w-full bg-no-repeat bg-cover h-[calc(100vh-134px)]" style="background-image: url('<%= asset_path("top.jpg") %>');">
+    <div class="relative bg-center w-full bg-no-repeat bg-cover h-auto min-h-screen " style="background-image: url('<%= asset_path("top.jpg") %>');">
         <div class="absolute inset-0 flex justify-center items-center text-3xl text-center">
 
-          <div class="w-2xl  grid grid-rows-2  bg-white rounded-lg shadow-md">
-              <div class="section_about">
-                <div class="">
-                  <h2>今日の気分は？</h2>
-                    <label class="text-3xl lg:text-2xl md:text-lg sm:text-md">
+          <div style="height: 400px; padding-left: 70px; border-radius: 2rem;" class="artboard artboard-horizontal phone-6 grid grid-rows-2 bg-white">
+              <div style="padding-top: 50px;" class="fieeling_section ">
+                    <h2 style="padding-bottom: 12px;">今日の気分は？</h2>
+                    <label class="text-3xl lg:text-2xl md:text-lg sm:text-md ">
                       あなたの今の気分をカラーボールから<br>直感で選んでみてください
                     </label>
-                </div>
               </div>
-            <%= render 'shared/form', color: @color %>
+              <%= render 'shared/form', color: @color %>
           </div>
         </div>
-        </div>
-<script>
-  document.querySelectorAll('.color-ball').forEach(function(ball){
-    ball.addEventListener('click', function(){
-      const colorId = this.getAttribute('data-color-id');
-      document.getElementById('mood_color_id').value = colorId;
-    });
-  });
-</script>
+      </div>

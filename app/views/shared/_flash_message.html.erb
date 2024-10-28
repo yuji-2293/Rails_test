@@ -1,20 +1,14 @@
 <% flash.each do |message_type, message| %>
 <% if flash[:success] %>
-<div role="alert" class="my-2">
-  <div class="bg-green-500 text-gray-200 font-bold rounded-t px-4 py-2">
-    <%= message_type %>
-  </div>
-  <div class="border border-t-0 border-green-400 rounded-b bg-green-100 px-4 py-3 text-green-700">
+<div role="alert" class="relative z-50 ">
+  <div class="border border-t-0 absolute top-2/4 border-green-400 shadow-md rounded-md py-4 px-2 my-3 mx-3  text-white bg-green-400">
     <%= message_type %> :
     <%= message %>
   </div>
 </div>
 <% else %>
-<div role="alert" class="my-2">
-  <div class="bg-red-500 text-white font-bold rounded-t px-4 py-2">
-    <%= message_type %>
-  </div>
-  <div class="border border-t-0 border-red-400 rounded-b bg-red-100 px-4 py-3 text-red-700">
+<div role="alert" class="relative z-50">
+  <div class="border border-t-0 absolute top-3/4 border-red-400 shadow-md rounded-md py-4 px-2 my-3 mx-3  text-white bg-red-400">
     <%= message_type %> :
     <%= message %>
   </div>

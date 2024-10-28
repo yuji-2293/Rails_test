@@ -4,7 +4,7 @@ class Color < ApplicationRecord
 
 
     COLORS ={
-    1 => "bg-red-300",
+    1 => "bg-sky-300",
     2 => "bg-red-500",
     3 => "bg-orange-300",
     4 => "bg-orange-500",

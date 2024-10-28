@@ -28,4 +28,4 @@ RUN chmod +x /usr/bin/entrypoint.sh
 
 # ENTRYPOINTとCMDを統合
 ENTRYPOINT ["entrypoint.sh"]
-CMD ["rails", "server", "-b", "0.0.0.0"]
+CMD ["bin/dev"]
