@@ -1,0 +1,19 @@
+      <%= render 'shared/flash_message' %>
+      <div class="mt-28 ml-8">
+    <h1 class="text-3xl font-bold ">ログイン</h1>
+      <%= form_with url: login_path, class:"h-auto" do |f| %>
+        <div class="mb-3 mx-auto">
+          <%= f.label :email, class:""%>
+          <%= f.email_field :email, class: "input input-bordered flex items-center grow" %>
+        </div>
+        <div class="mb-3">
+          <%= f.label :password, class: "" %>
+          <%= f.password_field :password, class: "input input-bordered flex items-center grow" %>
+        </div>
+        <%= f.submit "ログイン", class: "btn btn-secondary h-20 w-40 btn-xs sm:btn-sm md:btn-md lg:btn-lg animate-button_up hover:animate-none" %>
+      <% end %>
+      <div class='text-center'>
+        <%= link_to '登録ページへ', new_user_path %>
+        <%= link_to 'パスワードをお忘れの方はこちら', '#' %>
+      </div>
+      </div>

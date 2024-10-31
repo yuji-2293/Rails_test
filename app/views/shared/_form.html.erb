@@ -1,0 +1,27 @@
+<%= form_with model: @color ||Color.new, url: colors_path, local: true  do |f|%>
+            <div class="color_list mb-10 pl-5 ">
+                <div class="color_selection grid grid-flow-col mb-10 animation-float">
+                    <button type="button" class="color-ball w-16 active:animate-ping focus:animate-none h-16 bg-red-300 hover:animate-float_up rounded-full" data-color-id="1"></button>
+                    <button type="button" class="color-ball w-16 active:animate-ping focus:animate-none h-16 bg-orange-300 hover:animate-float_up rounded-full " data-color-id="3"></button>     
+                    <button type="button" class="color-ball w-16 active:animate-ping focus:animate-none h-16 bg-yellow-300 hover:animate-float_up rounded-full " data-color-id="5"></button>
+                    <button type="button" class="color-ball w-16 active:animate-ping focus:animate-none h-16 bg-green-300 hover:animate-float_up rounded-full " data-color-id="7"></button>
+                    <button type="button" class="color-ball w-16 active:animate-ping focus:animate-none h-16 bg-blue-300 hover:animate-sink_down rounded-full " data-color-id="9"></button>
+                    <button type="button" class="color-ball w-16 active:animate-ping focus:animate-none h-16 bg-purple-300 hover:animate-sink_down rounded-full " data-color-id="11"></button>
+                    <button type="button" class="color-ball w-16 active:animate-ping focus:animate-none h-16 bg-white outline hover:animate-float_up outline-slate-100 rounded-full "data-color-id="13"></button>
+                </div>
+                <div class="color_selection grid grid-flow-col ">
+                    <button type="button" class="color-ball w-16 active:animate-ping focus:animate-none   h-16 bg-red-500 hover:animate-float_up rounded-full " data-color-id="2"></button>
+                    <button type="button" class="color-ball w-16 active:animate-ping focus:animate-none   h-16 bg-orange-500 hover:animate-float_up rounded-full " data-color-id="4"></button>      
+                    <button type="button" class="color-ball w-16 active:animate-ping focus:animate-none   h-16 bg-yellow-500 hover:animate-float_up rounded-full " data-color-id="6"></button>
+                    <button type="button" class="color-ball w-16 active:animate-ping focus:animate-none   h-16 bg-green-500 hover:animate-float_up rounded-full " data-color-id="8"></button>
+                    <button type="button" class="color-ball w-16 active:animate-ping focus:animate-none   h-16 bg-blue-500 hover:animate-sink_down rounded-full " data-color-id="10"></button>
+                    <button type="button" class="color-ball w-16 active:animate-ping focus:animate-none   h-16 bg-purple-500 hover:animate-sink_down rounded-full " data-color-id="12"></button>
+                    <button type="button" class="color-ball w-16 active:animate-ping focus:animate-none   h-16 bg-black hover:animate-sink_down rounded-full " data-color-id="14"></button>
+                </div>
+            </div>
+
+            <%= f.hidden_field :mood_color_id, id: 'mood_color_id' %>
+            <%= button_tag type: "submit", class: "btn btn-secondary h-20 w-40 btn-xs sm:btn-sm md:btn-md lg:btn-lg animate-button_up hover:animate-none" do %>  
+            <p class=""></p>カラーを提出</P>
+            <% end %>
+<% end %>
