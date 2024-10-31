@@ -1,6 +1,7 @@
 class Color < ApplicationRecord
     belongs_to :user
     validates :mood_color_id, presence: true
+    before_save :limit_one_day
 
 
     COLORS ={
@@ -20,7 +21,18 @@ class Color < ApplicationRecord
     14 => "bg-black"
 }.freeze
 
+
+private
+
     def self.class_for_id(color_id)
         COLORS[color_id] || 'bg-gray-500'
+    end
+
+    def limit_one_day
+        # 特定の日時が存在するかを確認
+        if Color.exists?(user_id: self.user_id, created_at: Time.current.beginning_of_day..Time.current.end_of_day)
+            errors.add(:base, I18n.t('activerecord.errors.models.color.messages.limit_one_per_day'))
+            throw(:abort)
+        end
     end
 end

@@ -10,6 +10,7 @@ gem 'sorcery'
 gem "sprockets-rails"
 gem 'cssbundling-rails'
 gem 'jsbundling-rails'
+gem 'rails-i18n', '~> 7.0.0'
 
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"
