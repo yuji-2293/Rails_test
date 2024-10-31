@@ -1,0 +1,16 @@
+ja:
+  activerecord:
+    models:
+      color: "カラー"
+    attributes:
+      color:
+        mood_color_id: "カラーボール"
+    errors:
+      models:
+        color:
+          attributes:
+            mood_color_id: 
+              blank: "を選択してください"  # presence: true に対応するエラーメッセージ
+          # カスタムエラーメッセージ
+          messages:
+            limit_one_per_day: "本日は既にカラーボールが登録されています"

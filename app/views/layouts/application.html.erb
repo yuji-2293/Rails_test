@@ -1,16 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SampleApp</title>
+    <title>EmoticColor</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
   </head>
 
   <body>
-    <%= yield %>
+    <% if logged_in? %>
+      <%= render 'shared/header', colors: @colors %>
+    <% else %>
+      <%= render 'shared/before_login_header' %>
+    <% end %>
+      <%= render 'shared/flash_message' %>
+     <%= yield %>   
+    <%= render 'shared/footer' %>
+    <script>
+  document.querySelectorAll('.color-ball').forEach(function(ball){
+    ball.addEventListener('click', function(){
+      const colorId = this.getAttribute('data-color-id');
+      document.getElementById('mood_color_id').value = colorId;
+    });
+  });
+</script>
   </body>
 </html>

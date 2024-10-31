@@ -1,8 +1,14 @@
-<h1 class="text-3xl font-bold underline">
-    Hello world!
-</h1>
+    <div class="relative bg-center w-full bg-no-repeat bg-cover h-auto min-h-screen " style="background-image: url('<%= asset_path("top.jpg") %>');">
+        <div class="absolute inset-0 flex justify-center items-center text-3xl text-center">
 
-<button class="bg-gray-600 hover:bg-blue-800  rounded px-4 py-2">tailwind</button>
-
-<button class="btn">daisyUI</button>
-<button class="btn btn-secondary">btn btn-secondary</button>
+          <div style="height: 400px; padding-left: 70px; border-radius: 2rem;" class="artboard artboard-horizontal phone-6 grid grid-rows-2 bg-white">
+              <div style="padding-top: 50px;" class="fieeling_section ">
+                    <h2 style="padding-bottom: 12px;">今日の気分は？</h2>
+                    <label class="text-3xl lg:text-2xl md:text-lg sm:text-md ">
+                      あなたの今の気分をカラーボールから<br>直感で選んでみてください
+                    </label>
+              </div>
+              <%= render 'shared/form', color: @color %>
+          </div>
+        </div>
+      </div>
