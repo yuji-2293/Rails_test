@@ -1,26 +1,26 @@
      <h1>ユーザー登録</h1>
-      <%= form_with model: @user do |f| %>
+      <%= form_with model: @user, class:"mt-28 ml-8" do |f| %>
         <div class="mb-3">
           <%= f.label :firts_name, class: "grow"%>
-          <%= f.text_field :first_name, class: "input input-bordered flex items-center" %>
+          <%= f.text_field :first_name, class: "input input-bordered flex items-center grow" %>
         </div>
         <div class="mb-3">
           <%= f.label :last_name, class: "grow" %>
-          <%= f.text_field :last_name, class: "input input-bordered flex items-center gap-2" %>
+          <%= f.text_field :last_name, class: "input input-bordered flex items-center gap-2 grow" %>
         </div>
         <div class="mb-3">
           <%= f.label :email, class: "grow" %>
-          <%= f.email_field :email, class: "input input-bordered flex items-center gap-2" %>
+          <%= f.email_field :email, class: "input input-bordered flex items-center gap-2 grow" %>
         </div>
         <div class="mb-3">
           <%= f.label :password, class: "grow" %>
-          <%= f.password_field :password, class: "input input-bordered flex items-center gap-2" %>
+          <%= f.password_field :password, class: "input input-bordered flex items-center gap-2 grow" %>
         </div>
         <div class="mb-3">
           <%= f.label :password_confirmation, class: "grow" %>
-          <%= f.password_field :password_confirmation, class: "input input-bordered flex items-center gap-2" %>
+          <%= f.password_field :password_confirmation, class: "input input-bordered flex items-center gap-2 grow" %>
         </div>
-        <%= f.submit "登録", class: "btn btn-primary" %>
+        <%= f.submit "登録", class: "btn btn-secondary h-20 w-40 btn-xs sm:btn-sm md:btn-md lg:btn-lg animate-button_up hover:animate-none" %>
       <% end %>
       <div class='text-center'>
         <%= link_to 'ログインページへ', login_path %>
