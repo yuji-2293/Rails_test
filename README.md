@@ -22,6 +22,5 @@ Things you may want to cover:
 * Deployment instructions
 
 デプロイ先
-*** URL: https://rails-test-5mj3.onrender.com/
-**
+*** URL: https://rails-test-5mj3.onrender.com/**
 * ...
